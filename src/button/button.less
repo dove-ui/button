@@ -20,7 +20,7 @@
   padding: 10px 21px;
   font-size: 14px;
   border-radius: 4px;
-  transition: box-shadow 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+  transition: box-shadow, width 0.2s ease, background-color 0.3s ease, color 0.3s ease;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   position: relative;
   overflow: hidden;
@@ -33,22 +33,53 @@
     border-radius: 100px;
   }
 
+  &-icon {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    margin-top: -5px;
+  }
+
   &-size {
     &--large {
+      height: 40px;
       padding: 12px 30px;
+
+      .@{button-name}-icon {
+        width: 17px;
+        height: 17px;
+        margin-top: -3px;
+      }
     }
 
     &--medium {
+      height: 32px;
       padding: 8px 18px;
+
+      .@{button-name}-icon {
+        margin-top: -4px;
+      }
     }
 
     &--small {
+      height: 28px;
       padding: 6px 15px;
+
+      .@{button-name}-icon {
+        margin-top: -3px;
+      }
     }
 
     &--mini {
+      height: 24px;
       padding: 5px 12px;
       font-size: 12px;
+
+      .@{button-name}-icon {
+        margin-top: -1px;
+      }
     }
   }
 
@@ -222,6 +253,52 @@
       height: 100%;
       background-color: rgba(255, 255, 255, 0.3);
       cursor: not-allowed;
+    }
+  }
+
+  .loading-icon {
+    stroke: #343640;
+    stroke-width: 3.5;
+    stroke-linecap: round;
+    background: none;
+    vertical-align: middle;
+  }
+  .loading-icon .loading-icon-bg-path {
+    fill: none;
+    // stroke: #F2F2F2;
+    stroke: rgba(0, 0, 0, 0.1);
+  }
+  .loading-icon .loading-icon-active-path {
+    fill: none;
+    stroke: #20a0ff;
+    transform-origin: 50% 50%;
+  }
+  .loading-wipe .loading-icon-active-path {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: 0;
+    animation: loading-wipe 1.5s ease-in-out infinite, loading-rotate 2s linear infinite;
+  }
+  // .loading-default .loading-icon-active-path {
+  //   stroke-dasharray: 60, 150;
+  //   animation: loading-rotate 0.8s linear infinite;
+  // }
+
+  // @keyframes loading-rotate{
+  //   to { transform:rotate(1turn) }
+  // }
+
+  @keyframes loading-wipe{
+    0% {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -40px;
+    }
+    to {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -120px;
     }
   }
 }

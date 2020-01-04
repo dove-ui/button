@@ -17,7 +17,7 @@
   padding: 10px 21px;
   font-size: 14px;
   border-radius: 4px;
-  transition: box-shadow 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+  transition: box-shadow, width 0.2s ease, background-color 0.3s ease, color 0.3s ease;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   position: relative;
   overflow: hidden;
@@ -28,18 +28,44 @@
 .vc-button--round {
   border-radius: 100px;
 }
+.vc-button-icon {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+  margin-top: -5px;
+}
 .vc-button-size--large {
+  height: 40px;
   padding: 12px 30px;
 }
+.vc-button-size--large .vc-button-icon {
+  width: 17px;
+  height: 17px;
+  margin-top: -3px;
+}
 .vc-button-size--medium {
+  height: 32px;
   padding: 8px 18px;
 }
+.vc-button-size--medium .vc-button-icon {
+  margin-top: -4px;
+}
 .vc-button-size--small {
+  height: 28px;
   padding: 6px 15px;
 }
+.vc-button-size--small .vc-button-icon {
+  margin-top: -3px;
+}
 .vc-button-size--mini {
+  height: 24px;
   padding: 5px 12px;
   font-size: 12px;
+}
+.vc-button-size--mini .vc-button-icon {
+  margin-top: -1px;
 }
 .vc-button:focus {
   box-shadow: 0 0 0 3px rgba(220, 223, 230, 0.25);
@@ -173,4 +199,39 @@
   height: 100%;
   background-color: rgba(255, 255, 255, 0.3);
   cursor: not-allowed;
+}
+.vc-button .loading-icon {
+  stroke: #343640;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  background: none;
+  vertical-align: middle;
+}
+.vc-button .loading-icon .loading-icon-bg-path {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.1);
+}
+.vc-button .loading-icon .loading-icon-active-path {
+  fill: none;
+  stroke: #20a0ff;
+  transform-origin: 50% 50%;
+}
+.vc-button .loading-wipe .loading-icon-active-path {
+  stroke-dasharray: 90, 150;
+  stroke-dashoffset: 0;
+  animation: loading-wipe 1.5s ease-in-out infinite, loading-rotate 2s linear infinite;
+}
+@keyframes loading-wipe {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -40px;
+  }
+  to {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -120px;
+  }
 }
