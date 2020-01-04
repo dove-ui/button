@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="demo-block">
-      <vc-button @click="handleClick">Default</vc-button>
+      <vc-button @click="handleClick" :loading="loading">Default</vc-button>
       <vc-button type="info">Info</vc-button>
       <vc-button type="primary">Primary</vc-button>
       <vc-button type="warning">Warning</vc-button>
@@ -56,9 +56,19 @@ export default {
   components: {
     VcButton
   },
+  data () {
+    return {
+      loading: false
+    }
+  },
   methods: {
     handleClick () {
+      this.loading = true
       console.log(arguments)
+
+      setTimeout(() => {
+        this.loading = false
+      }, 2000)
     }
   }
 }
