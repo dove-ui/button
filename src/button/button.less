@@ -262,43 +262,47 @@
     stroke-linecap: round;
     background: none;
     vertical-align: middle;
-  }
-  .loading-icon .loading-icon-bg-path {
-    fill: none;
-    // stroke: #F2F2F2;
-    stroke: rgba(0, 0, 0, 0.1);
-  }
-  .loading-icon .loading-icon-active-path {
-    fill: none;
-    stroke: #20a0ff;
-    transform-origin: 50% 50%;
-  }
-  .loading-wipe .loading-icon-active-path {
-    stroke-dasharray: 90, 150;
-    stroke-dashoffset: 0;
-    animation: loading-wipe 1.5s ease-in-out infinite, loading-rotate 2s linear infinite;
-  }
-  // .loading-default .loading-icon-active-path {
-  //   stroke-dasharray: 60, 150;
-  //   animation: loading-rotate 0.8s linear infinite;
-  // }
 
-  // @keyframes loading-rotate{
-  //   to { transform:rotate(1turn) }
-  // }
+    .loading-icon-bg-path {
+      fill: none;
+      // stroke: #F2F2F2;
+      stroke: rgba(0, 0, 0, 0.1);
+    }
 
-  @keyframes loading-wipe{
-    0% {
-      stroke-dasharray: 1, 200;
+    .loading-icon-active-path {
+      fill: none;
+      stroke: #20a0ff;
+      transform-origin: 50% 50%;
+    }
+
+    &.loading-wipe .loading-icon-active-path {
+      stroke-dasharray: 90, 150;
       stroke-dashoffset: 0;
+      animation: loading-wipe 1.5s ease-in-out infinite, loading-rotate 2s linear infinite;
     }
-    50% {
-      stroke-dasharray: 90, 150;
-      stroke-dashoffset: -40px;
-    }
-    to {
-      stroke-dasharray: 90, 150;
-      stroke-dashoffset: -120px;
-    }
+
+    // &.loading-default .loading-icon-active-path {
+    //   stroke-dasharray: 60, 150;
+    //   animation: loading-rotate 0.8s linear infinite;
+    // }
+  }
+}
+
+// @keyframes loading-rotate{
+//   to { transform:rotate(1turn) }
+// }
+
+@keyframes loading-wipe{
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -40px;
+  }
+  to {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -120px;
   }
 }

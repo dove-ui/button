@@ -216,7 +216,7 @@
   stroke: #20a0ff;
   transform-origin: 50% 50%;
 }
-.vc-button .loading-wipe .loading-icon-active-path {
+.vc-button .loading-icon.loading-wipe .loading-icon-active-path {
   stroke-dasharray: 90, 150;
   stroke-dashoffset: 0;
   animation: loading-wipe 1.5s ease-in-out infinite, loading-rotate 2s linear infinite;
