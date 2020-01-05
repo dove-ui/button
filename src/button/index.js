@@ -1,4 +1,14 @@
 import Button from './button'
+import ButtonGroup from './button-group'
 import './button.less'
 
-export default Button
+Button.install = function (Vue, options = {}) {
+  Vue.component(options.name || Button.name, Button)
+  Vue.component((options.name || Button.name) + '-group', ButtonGroup)
+}
+
+export {
+  Button as default,
+  Button,
+  ButtonGroup
+}
