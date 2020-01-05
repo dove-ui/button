@@ -7,6 +7,7 @@
       {
         'vc-button--plain': plain,
         'vc-button--round': round,
+        'vc-button--block': block,
         'is-loading': loading
       }
     ]"
@@ -36,6 +37,7 @@ export default {
     size: String, // max, large, 默认，medium，samll, mini
     plain: Boolean,
     round: Boolean,
+    block: Boolean,
     disabled: Boolean,
     loading: Boolean,
     nativeType: {
