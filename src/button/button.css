@@ -28,6 +28,14 @@
 .vc-button--round {
   border-radius: 100px;
 }
+.vc-button--block {
+  display: block;
+  width: 100%;
+}
+.vc-button--block + .vc-button--block {
+  margin-left: 0;
+  margin-top: 10px;
+}
 .vc-button-icon {
   width: 15px;
   height: 15px;
