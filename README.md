@@ -1,5 +1,7 @@
 # button
 
+![](screenshot.png)
+
 ## Project setup
 ```
 yarn install
