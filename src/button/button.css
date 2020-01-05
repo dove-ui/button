@@ -208,6 +208,28 @@
   background-color: rgba(255, 255, 255, 0.3);
   cursor: not-allowed;
 }
+.vc-button-group {
+  display: inline-block;
+}
+.vc-button-group + .vc-button-group {
+  margin-left: 10px;
+}
+.vc-button-group .vc-button {
+  margin-left: -1px;
+  border-radius: 0;
+}
+.vc-button-group .vc-button:focus {
+  z-index: 1;
+}
+.vc-button-group .vc-button:first-child {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.vc-button-group .vc-button:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
 .vc-button .loading-icon {
   stroke: #343640;
   stroke-width: 3.5;
