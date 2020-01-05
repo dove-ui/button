@@ -44,17 +44,43 @@
       <vc-button disabled type="danger">Danger</vc-button>
       <vc-button disabled type="success">Success</vc-button>
     </div>
+
+    <div class="demo-block">
+      <vc-button block type="info">Block Button</vc-button>
+      <vc-button block type="success">Block Button</vc-button>
+    </div>
+
+    <div class="demo-block">
+      <vc-button-group>
+        <vc-button>Button</vc-button>
+        <vc-button>Button</vc-button>
+        <vc-button>Button</vc-button>
+      </vc-button-group>
+
+      <vc-button-group>
+        <vc-button type="info" size="medium">Button</vc-button>
+        <vc-button type="info" size="medium">Button</vc-button>
+        <vc-button type="info" size="medium">Button</vc-button>
+      </vc-button-group>
+
+      <vc-button-group>
+        <vc-button type="info" size="mini">Button</vc-button>
+        <vc-button type="danger" size="mini">Button</vc-button>
+        <vc-button type="success" size="mini">Button</vc-button>
+      </vc-button-group>
+    </div>
    
   </div>
 </template>
 
 <script>
-import VcButton from './button'
+import { Button as VcButton, ButtonGroup as VcButtonGroup } from './button'
 
 export default {
   name: 'app',
   components: {
-    VcButton
+    VcButton,
+    VcButtonGroup
   },
   data () {
     return {
@@ -75,6 +101,8 @@ export default {
 </script>
 <style>
   .demo-block {
+    width: 760px;
     padding: 15px;
+    margin: 0 auto;
   }
 </style>
