@@ -1,8 +1,10 @@
 {
-  "name": "vue-component-devtool",
+  "name": "@dove-ui/button",
   "version": "0.1.0",
   "private": false,
-  "main": "dist/index.umd.js",
+  "types": "types/index.d.ts",
+  "main": "dist/index.umd.min.js",
+  "libraryName": "VcButton",
   "scripts": {
     "dev": "vue-cli-service serve",
     "docs": "npm run build:docs && npm run version-push",
@@ -12,6 +14,23 @@
     "version-push": "node version-push.js && git add version.md && git commit -m \"chore(version): New version\" -uno && ls",
     "open": "dev serve -o docs"
   },
+  "homepage": "https://mengdu.github.io/dove-ui/button",
+  "repository": {
+    "type": "https",
+    "url": "git+https://github.com/mengdu/dove-ui/button"
+  },
+  "bugs": {
+    "url": "https://github.com/mengdu/dove-ui/button/issues"
+  },
+  "keywords": [
+    "button",
+    "vue-button"
+  ],
+  "author": {
+    "name": "lanyue",
+    "email": "lanyueos@qq.com"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-eslint": "^4.0.0",
