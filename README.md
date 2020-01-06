@@ -1,29 +1,33 @@
-# button
+# Button
 
-## Project setup
-```
-yarn install
-```
+A button component for vue.
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
+```js
+import { Button as VcButton, ButtonGroup as VcButtonGroup } from '@dove-ui/vc-button'
+import '@dove-ui/vc-button/dist/index.css'
 ```
 
-### Compiles and minifies for production
-```
-yarn run build
+```html
+<vc-button>Button</vc-button>
+
+<vc-button-group>
+  <vc-button>Button</vc-button>
+  <vc-button>Button</vc-button>
+</vc-button-group>
 ```
 
-### Run your tests
-```
-yarn run test
-```
+![](screenshot.png)
 
-### Lints and fixes files
-```
-yarn run lint
-```
+### Button Attributes
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+| Attribute   | Description   | Type    | Accepted Values                                                | Default   |
+|-------------|---------------|---------|----------------------------------------------------------------|-----------|
+| type        | type          | string  | `default`,`info`,`primary`,`warning`,`danger`,`success`,`text` | `default` |
+| size        | size          | string  | `large`,`medium`,`samll`,`mini`                                | —         |
+| plain       | plain         | boolean | —                                                              | false     |
+| round       | round         | boolean | —                                                              | false     |
+| disabled    | disabled      | boolean | —                                                              | false     |
+| block       | block         | boolean | —                                                              | false     |
+| loading     | loading state | boolean | —                                                              | false      |
+| native-type | native type   | string  | `button` / `submit` / `reset`                                  | `button`  |

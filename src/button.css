@@ -1,0 +1,279 @@
+.vc-button {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: 500;
+  user-select: none;
+  padding: 10px 21px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: box-shadow 0.3s cubic-bezier(0, 0, 0, 1), background-color 0.3s ease, color, border 0.3s ease;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.vc-button + .vc-button {
+  margin-left: 10px;
+}
+.vc-button--round {
+  border-radius: 100px;
+}
+.vc-button--block {
+  display: block;
+  width: 100%;
+}
+.vc-button--block + .vc-button--block {
+  margin-left: 0;
+  margin-top: 10px;
+}
+.vc-button-icon {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+.vc-button-size--large {
+  height: 40px;
+  padding: 12px 30px;
+}
+.vc-button-size--large .vc-button-icon {
+  width: 17px;
+  height: 17px;
+  margin-top: -3px;
+}
+.vc-button-size--medium {
+  height: 32px;
+  padding: 8px 18px;
+}
+.vc-button-size--medium .vc-button-icon {
+  margin-top: -4px;
+}
+.vc-button-size--small {
+  height: 28px;
+  padding: 6px 15px;
+}
+.vc-button-size--small .vc-button-icon {
+  margin-top: -3px;
+}
+.vc-button-size--mini {
+  height: 24px;
+  padding: 5px 12px;
+  font-size: 12px;
+}
+.vc-button-size--mini .vc-button-icon {
+  margin-top: -1px;
+}
+.vc-button:focus {
+  box-shadow: 0 0 0 3px rgba(220, 223, 230, 0.25);
+}
+.vc-button:active {
+  background-color: #f4f5f9;
+}
+.vc-button-type--default:hover {
+  border-color: #C6E2FF;
+  background-color: #ECF5FF;
+  color: #409EFF;
+}
+.vc-button-type--default:active {
+  border-color: #3A8EE6;
+}
+.vc-button-type--text {
+  border: none;
+  background: none;
+  color: #606266;
+}
+.vc-button-type--text:active,
+.vc-button-type--text:focus,
+.vc-button-type--text:hover {
+  color: #04A9FF;
+  box-shadow: none;
+  background-color: #F8F9FF;
+}
+.vc-button-type--text:active {
+  background-color: #F2F5FA;
+}
+.vc-button-type--info,
+.vc-button-type--primary,
+.vc-button-type--warning,
+.vc-button-type--danger,
+.vc-button-type--success {
+  color: #fff;
+}
+.vc-button-type--info {
+  background-color: #04A9FF;
+  border-color: #04A9FF;
+}
+.vc-button-type--info:hover {
+  background-color: #21B2FC;
+  border-color: #21B2FC;
+}
+.vc-button-type--info:focus {
+  box-shadow: 0 0 0 3px rgba(4, 169, 255, 0.25);
+}
+.vc-button-type--info:active {
+  background-color: #00A0F2;
+}
+.vc-button-type--primary {
+  background-color: #7952B3;
+  border-color: #7952B3;
+}
+.vc-button-type--primary:hover {
+  background-color: #8E74B4;
+  border-color: #8E74B4;
+}
+.vc-button-type--primary:focus {
+  box-shadow: 0 0 0 3px rgba(142, 116, 180, 0.25);
+}
+.vc-button-type--primary:active {
+  background-color: #7148AD;
+}
+.vc-button-type--warning {
+  background-color: #F9AA40;
+  border-color: #F9AA40;
+}
+.vc-button-type--warning:hover {
+  background-color: #FCB452;
+  border-color: #FCB452;
+}
+.vc-button-type--warning:focus {
+  box-shadow: 0 0 0 3px rgba(249, 170, 64, 0.25);
+}
+.vc-button-type--warning:active {
+  background-color: #F5A53E;
+}
+.vc-button-type--danger {
+  background-color: #F56C6C;
+  border-color: #F56C6C;
+}
+.vc-button-type--danger:hover {
+  background-color: #F78989;
+  border-color: #F78989;
+}
+.vc-button-type--danger:focus {
+  box-shadow: 0 0 0 3px rgba(245, 108, 108, 0.25);
+}
+.vc-button-type--danger:active {
+  background-color: #ED6767;
+}
+.vc-button-type--success {
+  background-color: #03B976;
+  border-color: #03B976;
+}
+.vc-button-type--success:hover {
+  background-color: #08CB83;
+  border-color: #08CB83;
+}
+.vc-button-type--success:focus {
+  box-shadow: 0 0 0 3px rgba(3, 185, 118, 0.25);
+}
+.vc-button-type--success:active {
+  background-color: #05B274;
+}
+.vc-button--plain {
+  background-color: #fff;
+}
+.vc-button--plain.vc-button-type--info:hover,
+.vc-button--plain.vc-button-type--primary:hover,
+.vc-button--plain.vc-button-type--warning:hover,
+.vc-button--plain.vc-button-type--danger:hover,
+.vc-button--plain.vc-button-type--success:hover {
+  color: #fff;
+}
+.vc-button--plain.vc-button-type--info {
+  color: #04A9FF;
+}
+.vc-button--plain.vc-button-type--primary {
+  color: #7952B3;
+}
+.vc-button--plain.vc-button-type--warning {
+  color: #F9AA40;
+}
+.vc-button--plain.vc-button-type--danger {
+  color: #F56C6C;
+}
+.vc-button--plain.vc-button-type--success {
+  color: #03B976;
+}
+.vc-button:disabled.vc-button-type--default {
+  background: #F5F5F5;
+}
+.vc-button:disabled::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
+}
+.vc-button-group {
+  display: inline-block;
+  font-size: 0;
+}
+.vc-button-group + .vc-button-group {
+  margin-left: 10px;
+}
+.vc-button-group .vc-button {
+  margin-left: -1px;
+  border-radius: 0;
+}
+.vc-button-group .vc-button:focus {
+  z-index: 1;
+}
+.vc-button-group .vc-button:first-child {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.vc-button-group .vc-button:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.vc-button .loading-icon {
+  stroke: #343640;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  background: none;
+  vertical-align: middle;
+}
+.vc-button .loading-icon .loading-icon-bg-path {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.1);
+}
+.vc-button .loading-icon .loading-icon-active-path {
+  fill: none;
+  stroke: #20a0ff;
+  transform-origin: 50% 50%;
+}
+.vc-button .loading-icon.loading-wipe .loading-icon-active-path {
+  stroke-dasharray: 90, 150;
+  stroke-dashoffset: 0;
+  animation: loading-wipe 1.5s ease-in-out infinite, loading-rotate 2s linear infinite;
+}
+@keyframes loading-wipe {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -40px;
+  }
+  to {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -120px;
+  }
+}
