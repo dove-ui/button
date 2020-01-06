@@ -17,7 +17,7 @@
   padding: 10px 21px;
   font-size: 14px;
   border-radius: 4px;
-  transition: box-shadow 0.3s cubic-bezier(0, 0, 0, 1), background-color 0.3s ease, color 0.3s ease;
+  transition: box-shadow 0.3s cubic-bezier(0, 0, 0, 1), background-color 0.3s ease, color, border 0.3s ease;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   position: relative;
   overflow: hidden;
@@ -80,6 +80,29 @@
 }
 .vc-button:active {
   background-color: #f4f5f9;
+}
+.vc-button-type--default:hover {
+  border-color: #C6E2FF;
+  background-color: #ECF5FF;
+  color: #409EFF;
+}
+.vc-button-type--default:active {
+  border-color: #3A8EE6;
+}
+.vc-button-type--text {
+  border: none;
+  background: none;
+  color: #606266;
+}
+.vc-button-type--text:active,
+.vc-button-type--text:focus,
+.vc-button-type--text:hover {
+  color: #04A9FF;
+  box-shadow: none;
+  background-color: #F8F9FF;
+}
+.vc-button-type--text:active {
+  background-color: #F2F5FA;
 }
 .vc-button-type--info,
 .vc-button-type--primary,
@@ -182,18 +205,6 @@
 }
 .vc-button--plain.vc-button-type--success {
   color: #03B976;
-}
-.vc-button-type--text {
-  border: none;
-  background: none;
-  color: #606266;
-}
-.vc-button-type--text:active,
-.vc-button-type--text:focus,
-.vc-button-type--text:hover {
-  color: #04A9FF;
-  box-shadow: none;
-  background: #F8F9FF;
 }
 .vc-button:disabled.vc-button-type--default {
   background: #F5F5F5;

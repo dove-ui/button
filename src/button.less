@@ -20,7 +20,7 @@
   padding: 10px 21px;
   font-size: 14px;
   border-radius: 4px;
-  transition: box-shadow 0.3s cubic-bezier(0, 0, 0, 1), background-color 0.3s ease, color 0.3s ease;
+  transition: box-shadow 0.3s cubic-bezier(0, 0, 0, 1), background-color 0.3s ease, color, border 0.3s ease;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   position: relative;
   overflow: hidden;
@@ -102,6 +102,36 @@
   }
 
   &-type {
+    &--default {
+      &:hover {
+        border-color: #C6E2FF;
+        background-color: #ECF5FF;
+        color: #409EFF;
+      }
+
+      &:active {
+        border-color: #3A8EE6;
+      }
+    }
+
+    &--text {
+      border: none;
+      background: none;
+      color: #606266;
+  
+      &:active,
+      &:focus,
+      &:hover {
+        color: #04A9FF;
+        box-shadow: none;
+        background-color: #F8F9FF;
+      }
+
+      &:active {
+        background-color: #F2F5FA;
+      }
+    }
+
     &--info,
     &--primary,
     &--warning,
@@ -232,20 +262,6 @@
 
     &.@{button-name}-type--success {
       color: #03B976;
-    }
-  }
-
-  &-type--text {
-    border: none;
-    background: none;
-    color: #606266;
-
-    &:active,
-    &:focus,
-    &:hover {
-      color: #04A9FF;
-      box-shadow: none;
-      background: #F8F9FF;
     }
   }
 
