@@ -4,7 +4,7 @@ import './button.less'
 
 Button.install = function (Vue, options = {}) {
   Vue.component(options.name || Button.name, Button)
-  Vue.component((options.name || Button.name) + '-group', ButtonGroup)
+  Vue.component((options.name || Button.name) + 'Group', ButtonGroup)
 }
 
 export {
