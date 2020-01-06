@@ -1,21 +1,23 @@
-const path = require('path')
+const camelcase = require('camelcase')
+const pkg = require('./package.json')
+const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  publicPath: "/",
-  outputDir: "dist",
+  publicPath: isProd ? './' : "/",
+  outputDir: 'docs/v' + pkg.version,
   // assetsDir: '', // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
   indexPath: 'index.html', // 指定生成的 index.html 的输出路径 (相对于 outputDir)。默认 index.html
   pages: {
     index: {
       // page 的入口
-      entry: 'src/main.js',
+      entry: 'examples/main.js',
       // 模板来源
       template: 'public/index.html',
       // 在 dist/index.html 的输出
       filename: 'index.html',
       // 当使用 title 选项时，
       // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-      title: 'Index Page',
+      title: 'Vue Component',
       // 在这个页面中包含的块，默认情况下会包含
       // 提取出来的通用 chunk 和 vendor chunk。
       chunks: ['chunk-vendors', 'chunk-common', 'index']
@@ -34,14 +36,16 @@ module.exports = {
   configureWebpack: { // webpack 配置
     resolve: {
       extensions: ['.md'],
-      modules: [
-        // path.resolve(__dirname, 'src'),
-        // path.resolve(__dirname, 'docs')
-      ]
+      alias: {
+        'vue$': 'vue/dist/vue.esm.js' // esm 版本支持template模板编译
+      }
+    },
+    output: {
+      // window.xxx
+      library: pkg.libraryName || camelcase(pkg.name, { pascalCase: true }) // 名字大驼峰
     }
   },
   chainWebpack (config) {
-
     // see: https://github.com/neutrinojs/webpack-chain
     config.module
       .rule('dotmd')
@@ -53,8 +57,7 @@ module.exports = {
       })
       .end()
       .use('vue-dotmd-loader')
-      // .loader('vue-dotmd-loader')
-      .loader(path.resolve(process.env.NODE_PATH, 'vue-dotmd-loader'))
+      .loader('vue-dotmd-loader')
       .options({
         dest: true,
         markdown: {

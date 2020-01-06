@@ -1,22 +1,30 @@
 {
-  "name": "@dove-ui/button",
+  "name": "vue-component-devtool",
   "version": "0.1.0",
-  "main": "dist/index.js",
+  "private": false,
+  "main": "dist/index.umd.js",
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "docs": "npm run build:docs && npm run version-push",
+    "build:docs": "vue-cli-service build",
+    "build:lib": "vue-cli-service lint && vue-cli-service build --dest dist --target lib --name index src/index.js",
+    "lint": "vue-cli-service lint",
+    "version-push": "node version-push.js && git add version.md && git commit -m \"chore(version): New version\" -uno && ls",
+    "open": "dev serve -o docs"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-plugin-eslint": "^3.11.0",
-    "@vue/cli-service": "^3.11.0",
-    "babel-eslint": "^10.0.1",
-    "core-js": "^2.6.5",
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue": "^2.6.10",
-    "vue-template-compiler": "^2.6.10"
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "vue-dotmd-loader": "^0.2.0",
+    "vue-template-compiler": "^2.6.10",
+    "core-js": "^3.3.2",
+    "vue": "^2.6.10"
   },
   "eslintConfig": {
     "root": true,
@@ -27,11 +35,16 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": [0]
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
   },
+  "eslintIgnore": [
+    "**/*.md"
+  ],
   "postcss": {
     "plugins": {
       "autoprefixer": {}
@@ -40,9 +53,5 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ],
-  "dependencies": {
-    "less": "^3.10.3",
-    "less-loader": "^5.0.0"
-  }
+  ]
 }
