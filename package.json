@@ -14,6 +14,11 @@
     "version-push": "node version-push.js && git add version.md && git commit -m \"chore(version): New version\" -uno && ls",
     "open": "dev serve -o docs"
   },
+  "files": [
+    "src",
+    "dist",
+    "types"
+  ],
   "homepage": "https://mengdu.github.io/dove-ui/button",
   "repository": {
     "type": "https",
