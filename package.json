@@ -1,6 +1,6 @@
 {
   "name": "@dove-ui/button",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "types": "types/index.d.ts",
   "main": "dist/index.umd.min.js",
@@ -61,7 +61,9 @@
       "eslint:recommended"
     ],
     "rules": {
-      "no-console": [0]
+      "no-console": [
+        0
+      ]
     },
     "parserOptions": {
       "parser": "babel-eslint"
