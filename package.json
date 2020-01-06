@@ -17,7 +17,8 @@
   "files": [
     "src",
     "dist",
-    "types"
+    "types",
+    "screenshot.png"
   ],
   "homepage": "https://mengdu.github.io/dove-ui/button",
   "repository": {

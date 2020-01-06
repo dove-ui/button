@@ -29,5 +29,5 @@ import '@dove-ui/vc-button/dist/index.css'
 | round       | round         | boolean | —                                                              | false     |
 | disabled    | disabled      | boolean | —                                                              | false     |
 | block       | block         | boolean | —                                                              | false     |
-| loading     | loading state | boolean | —                                                              | true      |
+| loading     | loading state | boolean | —                                                              | false      |
 | native-type | native type   | string  | `button` / `submit` / `reset`                                  | `button`  |
