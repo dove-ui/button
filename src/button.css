@@ -193,7 +193,7 @@
 .vc-button-type--text:hover {
   color: #04A9FF;
   box-shadow: none;
-  background: none;
+  background: #F8F9FF;
 }
 .vc-button:disabled.vc-button-type--default {
   background: #F5F5F5;
@@ -210,6 +210,7 @@
 }
 .vc-button-group {
   display: inline-block;
+  font-size: 0;
 }
 .vc-button-group + .vc-button-group {
   margin-left: 10px;
