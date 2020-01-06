@@ -4,7 +4,7 @@ const chalk = require('chalk')
 const pkg = require('./package.json')
 const MarkdownIt = require('markdown-it')
 const versionFile = path.resolve(__dirname, 'version.md')
-const docBaseUrl = `https://mengdu.github.io/${pkg.name}/`
+const docBaseUrl = ''
 
 function main () {
   if (!fs.existsSync(versionFile)) {
@@ -14,7 +14,7 @@ function main () {
   let content = fs.readFileSync(versionFile, 'utf8')
   let hasNewVersion = false
   if (content.indexOf(pkg.version) === -1) {
-    content = `+ [v${pkg.version}](${docBaseUrl}docs/${pkg.version}) - ${new Date()}\n` + content
+    content = `+ [v${pkg.version}](${docBaseUrl}v${pkg.version}) - ${new Date()}\n` + content
     fs.writeFileSync(versionFile, content)
 
     console.log(`new version: ${chalk.green(`v${pkg.version}`)}`)
