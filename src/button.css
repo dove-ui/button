@@ -88,6 +88,7 @@
 }
 .vc-button-type--default:active {
   border-color: #3A8EE6;
+  color: #3A8EE6;
 }
 .vc-button-type--text {
   border: none;
