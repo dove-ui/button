@@ -3,8 +3,8 @@
 A button component for vue.
 
 ```js
-import { Button as VcButton, ButtonGroup as VcButtonGroup } from '@dove-ui/vc-button'
-import '@dove-ui/vc-button/dist/index.css'
+import { Button as VcButton, ButtonGroup as VcButtonGroup } from '@dove-ui/button'
+import '@dove-ui/button/dist/index.css'
 ```
 
 ```html
