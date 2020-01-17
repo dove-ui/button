@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import DemoBlock from './components/demo-block'
+import router from './router'
+import pkg from '../package.json'
 import Component from '../src'
 import 'vue-dotmd-loader/dist/css/default.css'
 import 'github-markdown-css/github-markdown.css'
@@ -14,6 +16,12 @@ Vue.config.productionTip = false
 
 const app = new Vue({
   render: h => h(App),
+  router,
+  data () {
+    return {
+      pkg: pkg
+    }
+  }
 }).$mount('#app')
 
 window.app = app
